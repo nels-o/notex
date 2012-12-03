@@ -1,0 +1,116 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                         %%
+%%        Packages         %%
+%%                         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage[geometry]{ifsym}
+\usepackage{float}
+\usepackage{latexsym}
+\usepackage{tikz}
+\usepackage{setspace}
+\usetikzlibrary{arrows}
+\usetikzlibrary{automata}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                         %%
+%%      Environments       %%
+%%                         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{prob}[1]{\ \\\textbf{\Large{#1}:}\\ }{}
+\newenvironment{sol}{\begin{quotation}\ \\}{\end{quotation}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                         %%
+%%        Commands         %%
+%%                         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\m}[1]{\mathrm{#1}}
+\newcommand{\sig}[2]{$\Sigma_{#1}^{#2}$}
+\newcommand{\pig}[2]{$\Pi_{#1}^{#2}$}
+\newcommand{\sigt}[2]{$\Sigma_{#1}$\textsc{Time}(#2)}
+\newcommand{\pigt}[2]{$\Pi_{#1}$\textsc{Time}(#2)}
+\newcommand{\define}[2]{\begin{quotation}\textbf{#1}: \\#2\end{quotation}}
+\newcommand{\co}[1]{$\overline{#1}$}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                         %%
+%%         Style           %%
+%%                         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtheorem{claim}{Claim}
+\newtheorem{theorem}{Theorem}
+\newtheorem{note}{Note}
+\newtheorem{lemma}{Lemma}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                         %%
+%%       DEFINITIONS       %%
+%%                         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+
+
+%% Don't forget to add a '\ ' to \def's: it fixes that macro goofiness
+
+\def\twocol{\textsc{2Col\ }}          % Two Coloring Problem
+\def\thrcol{\textsc{3Col\ }}          % Three Coloring Problem
+\def\con{\textsc{Connected\ }}        % Connectivity
+\def\halt{\textsc{Halting Problem\ }} % Halting Problem
+\def\haltdef{$\{\mathrm{Given\ } (M,\alpha)\mathrm{where\ }M\mathrm{\ is\ a\ Turing\ Machine,\ and\ }\alpha\mathrm{\ is\ input.\ Does\ }M\mathrm{\ halt\ when\ run\ on\ }\alpha$\}\ } % Halting Problem
+\def\thrsat{\textsc{3Sat\ }}          % 3 CNF Satisfiability
+\def\twosat{\textsc{2Sat\ }}          % 2 CNF Satisfiability
+\def\sat{\textsc{Sat\ }}          % Sat
+\def\msat{\textsc{MaxSat\ }}          % maxSat
+\def\taut{\textsc{Tautology\ }}       % Tautology :)
+\def\clique{\textsc{Clique\ }}        % Clique
+\def\path{\textsc{Path\ }}
+\def\lhalt{\textsc{Linear Halt\ }}        % Clique
+\def\vertcov{\textsc{Vertex Cover\ }} % Vertex Cover
+\def\iset{\textsc{Independent Set\ }} % Independent Set
+\def\eiset{\textsc{Exact Independent Set\ }} % Exact Independent Set
+\def\intpro{\textsc{0-1 Integer Programming\ }} % 0-1 Integer Programming
+\def\NPC{\textbf{NP}-complete\ }
+\def\NPH{\textbf{NP}-hard\ }
+\def\ptr{polynomial-time reducible\ }
+\def\pcr{polynomial-time Cook reducible\ }
+\def\P{\textbf{P\ }}
+\def\Pp{\textbf{P$_{poly}$\ }}
+\def\PH{\textbf{PH}\ }
+\def\PC{\textbf{P}-complete\ }
+\def\NP{\textbf{NP\ }}
+\def\coNP{\textbf{coNP\ }}
+\def\coNPC{\textbf{coNP}-complete\ }
+\def\dtime{\textbf{DTIME\ }}
+\def\ntime{\textbf{NTIME\ }}
+\def\aha{$\leq_p$\ }
+\def\utm{\textsc{Universal\ Turing\ Machine\ }}
+\def\S{\textbf{SPACE\ }}
+\def\NS{\textbf{NSPACE\ }}
+\def\PS{\textbf{PSPACE\ }}
+\def\NPS{\textbf{NPSPACE\ }}
+\def\PSC{\textbf{PSPACE}-complete\ }
+\def\PSH{\textbf{PSPACE}-hard\ }
+\def\L{\textbf{L}\ }
+\def\NL{\textbf{NL}\ }
+\def\coNL{\textbf{coNL}\ }
+\def\coNLC{\textbf{coNL}-complete\ }
+\def\NLH{\textbf{NL}-hard\ }
+\def\NLC{\textbf{NL}-complete\ }
+\def\EXP{\textbf{EXP}\ }
+\def\NEXP{\textbf{NEXP}\ }
+\def\NPI{\textbf{NP}-intermediate\ }
+\def\SIT{\textbf{Suck it Trebeck}}
+\def\sath{\textsc{Sat$_H$}}
+\def\tcf{time-constructible function\ }
+\def\scf{space-constructible function\ }
+\def\ps{\textbf{PSPACE}\ }
+\def\psc{\textbf{PSPACE}-complete\ }
+\def\ww{\huge\textsc{\textbf{WOOT\ WOOT\ }}}
